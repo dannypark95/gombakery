@@ -9,6 +9,7 @@ interface FeatureItemProps {
   reverse?: boolean;
 }
 
+// src/components/Feature/FeatureItem.tsx
 const FeatureItem: React.FC<FeatureItemProps> = ({
   imgSrc,
   title,
@@ -25,22 +26,20 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
       ref={ref}
       className={`flex flex-wrap ${
         reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-      } items-center justify-between mb-8 transition-all duration-700 ease-in-out ${
+      } items-center justify-center mb-8 transition-all duration-700 ease-in-out ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="w-full md:w-1/2">
-        {' '}
-        {/* Larger image container */}
+      <div className="w-full md:w-1/3 px-4">
         <img
           src={imgSrc}
           alt={title}
-          className="rounded-lg shadow-md w-full h-auto"
+          className="rounded-lg shadow-md w-full h-auto mx-auto"
         />
       </div>
-      <div className="w-full md:w-1/2 mt-4 md:mt-0 md:px-4 flex flex-col justify-center">
-        <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-        <p className="font-helvetica">{description}</p>
+      <div className="w-full md:w-1/2 mt-4 md:mt-0 flex flex-col justify-center">
+        <h2 className="text-2xl font-semibold mb-3 text-center">{title}</h2>
+        <p className="font-helvetica text-center">{description}</p>
       </div>
     </div>
   );
