@@ -9,7 +9,7 @@ import images from '../../config/images';
 const Navbar: React.FC = () => {
   return (
     <nav className="shadow-lg py-4">
-      <div className="max-w-6xl mx-auto px-14">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-14">
         <div className="flex justify-between items-center">
           <Link
             to="/"

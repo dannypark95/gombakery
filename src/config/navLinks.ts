@@ -1,11 +1,12 @@
 import images from './images';
+import externalLinks from './extrernalLinks';
 
 const navLinks = [
-  { title: 'Order', path: '/order', image: images.orderText },
+  { title: 'Order', path: externalLinks.order, image: images.orderText },
   { title: 'About', path: '/about', image: images.aboutText },
   {
     title: 'Instagram',
-    path: 'https://www.instagram.com/gom.bakery/',
+    path: externalLinks.instagram,
     image: images.instagramDraw,
   },
 ];

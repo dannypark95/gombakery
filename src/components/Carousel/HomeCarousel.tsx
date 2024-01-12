@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link to navigate to the order page
 import videos from '../../config/videos';
+import externalLinks from '../../config/extrernalLinks';
 
 const HomeCarousel: React.FC = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -9,7 +11,7 @@ const HomeCarousel: React.FC = () => {
       setCurrentVideoIndex((prevIndex) =>
         prevIndex === Object.keys(videos).length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
@@ -28,15 +30,23 @@ const HomeCarousel: React.FC = () => {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover" // Updated classes here
+            className="w-full h-full object-cover"
           >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       ))}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>{' '}
-      {/* Overlay for dimming */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
+      <div className="absolute inset-0 flex justify-center items-center">
+        <Link
+          // to="/order"
+          to={externalLinks.order}
+          className="bg-[#202020] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#404040] transition duration-300"
+        >
+          ORDER NOW
+        </Link>
+      </div>
     </div>
   );
 };

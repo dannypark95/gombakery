@@ -4,16 +4,22 @@ import { Link } from 'react-router-dom';
 
 import navLinks from '../../config/navLinks';
 import externalLinks from '../../config/extrernalLinks';
-import icons from '../../config/icons';
+import images from '../../config/images';
 
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const Bar = icons.bars;
 
   return (
     <Fragment>
-      <button className="md:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>
-        <Bar className="w-7 h-7" />
+      <button
+        className="md:hidden text-2xl p-2" // Add padding for touch area
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <img
+          src={images.hambergerIcon}
+          alt="Menu"
+          className="w-8 h-8" // Adjust width and height as needed
+        />
       </button>
 
       {isOpen && (

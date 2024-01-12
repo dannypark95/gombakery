@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import HomeCarousel from '../../components/Carousel/HomeCarousel';
 import FeaturesSection from '../../components/Feature/FeatureSection';
-import Footer from '../../components/Footer/Footer';
+import Story from '../../components/Story/Story';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <Fragment>
       <HomeCarousel />
       <FeaturesSection />
-      <Footer />
-    </div>
+      <Story />
+    </Fragment>
   );
 };
 
