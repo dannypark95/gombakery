@@ -11,6 +11,11 @@ import ourStory2 from '../assets/images/ourStory2.png';
 import ourStory3 from '../assets/images/ourStory3.jpg';
 import aboutLogo from '../assets/images/aboutLogo.png';
 import hambergerIcon from '../assets/images/hambergerIcon.png';
+import exitIcon from '../assets/images/exitIcon.png';
+import about1 from '../assets/images/about1.jpeg';
+import about2 from '../assets/images/about2.jpeg';
+import about3 from '../assets/images/about3.jpeg';
+import about4 from '../assets/images/about4.jpeg';
 
 const images = {
   logo,
@@ -26,6 +31,11 @@ const images = {
   ourStory3,
   aboutLogo,
   hambergerIcon,
+  about1,
+  about2,
+  about3,
+  about4,
+  exitIcon,
 };
 
 export default images;

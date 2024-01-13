@@ -1,49 +1,62 @@
-// src/components/Navbar/MobileMenu.tsx
-import React, { useState, Fragment } from 'react';
+// MobileMenu.tsx
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import navLinks from '../../config/navLinks';
-import externalLinks from '../../config/extrernalLinks';
 import images from '../../config/images';
 
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMobileMenu = () => {
+    setIsOpen(!isOpen);
+    // Toggle body scrolling
+    document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+  };
+
   return (
     <Fragment>
-      <button
-        className="md:hidden text-2xl p-2" // Add padding for touch area
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <img
-          src={images.hambergerIcon}
-          alt="Menu"
-          className="w-8 h-8" // Adjust width and height as needed
-        />
+      <button className="md:hidden text-2xl p-2" onClick={toggleMobileMenu}>
+        {/* Animated icon */}
+        <div className="w-8 h-8 relative">
+          <img
+            src={isOpen ? images.exitIcon : images.hambergerIcon}
+            alt="Menu"
+            className="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
+          />
+        </div>
       </button>
 
+      {/* Overlay div will cover content to make it less visible when menu is open */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md py-4 z-10">
-          {navLinks.map((link) => (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-10"
+          style={{ top: '96px' }} // Start below the navbar
+          onClick={toggleMobileMenu}
+        />
+      )}
+
+      {/* The mobile menu container */}
+      <div
+        className={`fixed top-0 left-0 w-full shadow-md z-20 transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-y-[100px]' : '-translate-y-full'
+        } md:hidden`}
+      >
+        <div className="py-4 bg-[#FCF6EF]">
+          {navLinks.map((link, index) => (
             <Link
-              key={link.title}
+              key={index}
               to={link.path}
-              className="block py-2 px-4 text-gray-700 hover:text-gray-900 text-xl"
-              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center py-4 text-gray-700 hover:text-gray-900 text-xl"
+              onClick={toggleMobileMenu}
             >
-              {link.title}
+              {link.image && (
+                <img src={link.image} alt={link.title} className="h-6 mr-2" />
+              )}
             </Link>
           ))}
-          <a
-            href={externalLinks.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block py-2 px-4 text-gray-700 hover:text-gray-900 text-xl"
-          >
-            Instagram
-          </a>
         </div>
-      )}
+      </div>
     </Fragment>
   );
 };

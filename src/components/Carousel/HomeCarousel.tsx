@@ -42,7 +42,7 @@ const HomeCarousel: React.FC = () => {
         <Link
           // to="/order"
           to={externalLinks.order}
-          className="bg-[#202020] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#404040] transition duration-300"
+          className="bg-[#202020] text-white px-6 py-3 rounded-full text-2xl font-medium hover:bg-[#404040] transition duration-300"
         >
           ORDER NOW
         </Link>

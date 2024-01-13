@@ -76,6 +76,83 @@ body {
   animation: slideInRight 1s ease-out forwards;
 }
 
+/* Add this CSS to your stylesheet */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimming effect */
+  z-index: 9; /* Below the navbar */
+}
+
+.mobile-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav-link {
+  padding: 12px 0; /* Increase spacing */
+  width: 100%; /* Ensure full width for center alignment */
+  text-align: center; /* Center text */
+}
+
+.mobile-nav-image {
+  margin-bottom: 12px; /* Space below the image */
+}
+
+/* Ensure the navbar is above other content */
+.mobile-navbar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile Menu container styles */
+.mobile-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Sliding transition */
+}
+
+/* Mobile Menu link styles */
+.mobile-nav-link {
+  padding: 12px 0; /* Spacing between menu items */
+  width: 100%; /* Full width for center alignment */
+  text-align: center; /* Center text */
+}
+
+/* Mobile Menu image styles */
+.mobile-nav-image {
+  margin-bottom: 12px; /* Space below image */
+}
+
+.main-navbar {
+  z-index: 30; /* Higher than the mobile menu overlay */
+}
+
+/* Mobile Menu icon transition */
+.icon-transition {
+  transition: opacity 0.8s ease;
+}
+
+/* Mobile Menu sliding transition */
+.mobile-menu-transition {
+  transition: transform 0.8s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
+
+/* Ensure the mobile menu is initially off the screen on mobile */
+.mobile-menu-container {
+  transform: translateX(-100%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

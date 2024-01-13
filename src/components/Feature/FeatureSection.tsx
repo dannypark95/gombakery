@@ -12,12 +12,12 @@ const FeaturesSection: React.FC = () => {
         <FeatureItem
           imgSrc={images.featureHandmade}
           title="Handmade"
-          description="Every product is handcrafted with love and care using traditional methods."
+          description="Each of our products is meticulously handcrafted with love, care, and a dedication to quality."
         />
         <FeatureItem
           imgSrc={images.featureLocal}
           title="Local"
-          description="We pride ourselves on sourcing ingredients from local producers and suppliers."
+          description="We take pride in being a local Chicago bakery, delivering our handcrafted goods with care to neighboring communities."
           reverse={true}
         />
         <FeatureItem
