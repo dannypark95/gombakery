@@ -7,10 +7,4 @@ const videos = {
   home_video_1: `${externalLinks.cdn}/baking_1.mp4`,
 };
 
-// const videos = {
-//   home_video_1,
-//   home_video_2,
-//   home_video_3,
-// };
-
 export default videos;
