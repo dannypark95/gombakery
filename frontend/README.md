@@ -1,53 +1,46 @@
-# Gom Bakery
+# Getting Started with Create React App
 
-Welcome to the Gom Bakery ordering website - a place where passion for baked goods meets the convenience of online ordering. This project aims to provide a seamless experience for users to explore our bakery's offerings and place orders for their favorite treats.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Stack Used
+## Available Scripts
 
-- React.js: A JavaScript library for building user interfaces.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-- Tailwind CSS: A utility-first CSS framework for rapidly building custom designs.
-- HTML5 & CSS3: Semantic elements and styles.
-- Responsive Web Design: Mobile-first approach with responsive design techniques.
+In the project directory, you can run:
 
-## Project Structure
+### `npm start`
 
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-src/
-├── components/ - Reusable components like Navbar, Footer, Carousel, etc.
-├── config/ - Configuration files for links, images, and videos.
-├── pages/ - Individual pages for Home, About, and Order.
-├── assets/ - Static files like images and videos.
-├── App.tsx - The main React component that wraps the entire app.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
+### `npm test`
 
-## Getting Started
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-To get a local copy up and running, follow these simple steps:
+### `npm run build`
 
-1. Clone the repository:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-   ```sh
-   git clone https://github.com/dannypark95/gom-bakery.git
-   ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. Install NPM packages:
-   ```sh
-   npm install
-   ```
-3. Start the development server:
-   ```sh
-   npm start
-   ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Contributions
+### `npm run eject`
 
-We welcome contributions to the Gom Bakery website. If you have a suggestion that would make this better, please fork the repo and create a pull request.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Contact
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Daniel Sunghyun Park - dannypark95@gmail.com
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Project Link: [https://gombakery.com/](https://gombakery.com/)
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

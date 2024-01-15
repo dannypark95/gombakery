@@ -1,8 +1,8 @@
 /* src/index.css or src/App.css */
 @font-face {
-  font-family: 'SOGANGUNIVERSITYTTF';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2')
-    format('woff2');
+  font-family: "SOGANGUNIVERSITYTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* Add this line */
@@ -10,20 +10,9 @@
 
 body {
   margin: 0;
-  font-family:
-    'SOGANGUNIVERSITYTTF',
-    sans-serif,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: "SOGANGUNIVERSITYTTF", sans-serif, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fcf9f6;
@@ -43,7 +32,7 @@ body {
 }
 
 .font-helvetica {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 @keyframes slideInLeft {
@@ -184,5 +173,5 @@ body {
 }
 
 .font-helvetica {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
