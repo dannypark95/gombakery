@@ -1,3 +1,5 @@
+// import { extrernalLinks } from '../config/extrernalLinks';
+
 import logo from '../assets/images/logo.png';
 import logo_navbar from '../assets/images/logo_navbar.png';
 import aboutText from '../assets/images/aboutText.png';
