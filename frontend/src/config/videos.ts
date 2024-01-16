@@ -1,7 +1,7 @@
 import externalLinks from './extrernalLinks';
 
 const videos = {
-  home_video_1: `${externalLinks.cloudFrontBaseUrl}/baking_1.mp4`,
+  home_video_1: `${externalLinks.cloudFrontBaseUrl}/video/baking_1.mp4`,
 };
 
 // const videos = {
