@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import images from '../../config/images';
 import { useInView } from 'react-intersection-observer';
 
@@ -118,12 +117,12 @@ const Story: React.FC = () => {
                 quality and community. Every purchase supports our mission to
                 spread warmth and kindness, one baked good at a time.
               </p>
-              <Link
-                to="/about"
+              <a
+                href="/about"
                 className="text-lg font-semibold underline decoration-dotted decoration-[#373736] hover:decoration-solid transition-all duration-300 mt-4 inline-block"
               >
                 Read More
-              </Link>
+              </a>
             </div>
           </div>
         </div>
